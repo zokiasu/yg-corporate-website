@@ -96,7 +96,7 @@ const handleVideoLoaded = (isLoaded: boolean) => {
 
 const definedTimeToShowVideo = () => {
   if (props.initialTime?.time > 0) {
-    return 3500
+    return 2000
   }
   return 5000
 }
