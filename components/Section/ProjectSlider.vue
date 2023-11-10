@@ -5,6 +5,7 @@
       id="swiperVideo"
       class="swiper-video"
       :loop="true"
+      :allow-touch-move="false"
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
