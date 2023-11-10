@@ -58,6 +58,7 @@ const emit = defineEmits(['videoTimeUpdate'])
 
 const YoutubeIframeComponent = ref(null)
 const YoutubeIframeIsPlaying = ref(false)
+let observer
 
 const callPlayPauseIframe = () => {
   if (!YoutubeIframeComponent.value) {
@@ -123,4 +124,29 @@ watch(
   },
   { immediate: true },
 )
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          YoutubeIframeComponent.value?.playVideo()
+        } else {
+          YoutubeIframeComponent.value?.stopVideo()
+        }
+      })
+    },
+    { threshold: 0.5 },
+  )
+
+  if (YoutubeIframeComponent.value) {
+    observer.observe(YoutubeIframeComponent.value.$el)
+  }
+})
+
+onUnmounted(() => {
+  if (YoutubeIframeComponent.value && observer) {
+    observer.unobserve(YoutubeIframeComponent.value.$el)
+  }
+})
 </script>
