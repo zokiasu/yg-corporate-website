@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hide-scrollbar">
     <slot />
   </div>
 </template>
