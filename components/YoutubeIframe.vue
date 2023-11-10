@@ -58,7 +58,7 @@ const onPlayerStateChange = (event) => {
     intervalId = setInterval(() => {
       const currentTime = player.value.getCurrentTime()
       emit('videoTimeUpdate', currentTime)
-      if (duration - currentTime <= 10) {
+      if ((duration - currentTime) <= 10) {
         // 1 seconde avant la fin
         player.value.seekTo(duration - (duration - 5)) // Rembobiner de 5 secondes
       }
