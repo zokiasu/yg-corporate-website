@@ -1,11 +1,11 @@
 <template>
   <div class="flex h-screen items-center justify-center bg-ygdistinctblack">
     <div class="flex flex-col space-y-10 overflow-hidden">
-      <p
-        class="staatliches ml-5 w-fit text-5xl font-bold text-white lg:ml-0 2xl:text-7xl"
+      <YGTitleHomePage
+        class=" ml-5text-white lg:ml-0"
       >
         VIBE THE FLOW.
-      </p>
+      </YGTitleHomePage>
       <LazyPerformanceSlider class="xl:mx-40" />
       <CustomButton
         class="mr-5 flex items-center gap-2 self-end text-ygdistinctblack lg:mr-0"

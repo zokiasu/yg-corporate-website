@@ -54,6 +54,6 @@ onUnmounted(() => {
     <SectionProjectSlider class="panel" />
     <LazySectionNews class="panel" />
     <LazySectionPerformanceVideo class="panel" />
-    <LazySectionNews class="panel" />
+    <LazySectionFooter class="panel" />
   </div>
 </template>

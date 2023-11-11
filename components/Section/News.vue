@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-screen items-center justify-center">
     <div class="flex flex-col overflow-hidden">
-      <p class="staatliches ml-5 w-fit text-5xl font-bold 2xl:text-7xl">Latest News</p>
+      <YGTitleHomePage class="ml-5 lg:ml-0">Latest News</YGTitleHomePage>
       <div
         class="remove-scrollbar flex gap-5 overflow-hidden overflow-x-scroll scroll-smooth px-5 py-10 lg:gap-10"
       >
