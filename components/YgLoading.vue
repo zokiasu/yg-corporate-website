@@ -29,19 +29,21 @@ const videoClasses = computed(() => {
 })
 
 onMounted(() => {
+  document.body.style.overflow = 'hidden'; // Désactiver le défilement
   setTimeout(() => {
     if (videoPlayer.value) {
-      videoPlayer.value.play()
-      console.log('startVideo')
+      videoPlayer.value.play();
+      console.log('startVideo');
     }
-  }, 150)
-})
+  }, 150);
+});
 
 const endedVideo = () => {
-  console.log('endedVideo')
-  fadeOut.value = true // Ceci déclenche la réactivité pour changer les classes
+  console.log('endedVideo');
+  fadeOut.value = true;
   setTimeout(() => {
-    displayLoading.value = false
-  }, 50)
-}
+    displayLoading.value = false;
+    document.body.style.overflow = ''; // Réactiver le défilement
+  }, 150);
+};
 </script>

@@ -58,7 +58,6 @@ const emit = defineEmits(['videoTimeUpdate'])
 
 const YoutubeIframeComponent = ref(null)
 const YoutubeIframeIsPlaying = ref(false)
-let observer
 
 const callPlayPauseIframe = () => {
   if (!YoutubeIframeComponent.value) {
@@ -99,7 +98,7 @@ const definedTimeToShowVideo = () => {
   if (props.initialTime?.time > 0) {
     return 2000
   }
-  return 5000
+  return 7000
 }
 
 const updateTime = (time: Number) => {
@@ -112,6 +111,7 @@ watch(
   (newValue, oldValue) => {
     if (newValue !== oldValue) {
       if (newValue) {
+        console.log('update playvideo')
         YoutubeIframeComponent.value?.playVideo()
         setTimeout(() => {
           YoutubeIframeIsPlaying.value = true
@@ -125,7 +125,12 @@ watch(
   { immediate: true },
 )
 
-onMounted(() => {
+let observerInitialized = false
+let observer: any
+
+function initializeObserver() {
+  if (observerInitialized || !YoutubeIframeComponent.value) return
+
   observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -139,14 +144,22 @@ onMounted(() => {
     { threshold: 0.5 },
   )
 
-  if (YoutubeIframeComponent.value) {
-    observer.observe(YoutubeIframeComponent.value.$el)
+  observer.observe(YoutubeIframeComponent.value?.$el)
+  observerInitialized = true
+}
+
+onMounted(() => {
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', initializeObserver, { once: true })
   }
 })
 
 onUnmounted(() => {
   if (YoutubeIframeComponent.value && observer) {
     observer.unobserve(YoutubeIframeComponent.value.$el)
+  }
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('scroll', initializeObserver)
   }
 })
 </script>
