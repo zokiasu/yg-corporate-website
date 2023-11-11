@@ -1,5 +1,7 @@
 <template>
-  <div class="flex h-screen flex-col items-center justify-center space-y-20 p-5 lg:p-0">
+  <div
+    class="flex min-h-screen flex-col items-center justify-center space-y-20 p-5 py-20 lg:p-0"
+  >
     <div class="w-full space-y-5 lg:w-3/4">
       <YGTitleHomePage>YG Life</YGTitleHomePage>
       <div class="space-y-2">

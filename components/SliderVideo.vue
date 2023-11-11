@@ -111,7 +111,6 @@ watch(
   (newValue, oldValue) => {
     if (newValue !== oldValue) {
       if (newValue) {
-        console.log('update playvideo')
         YoutubeIframeComponent.value?.playVideo()
         setTimeout(() => {
           YoutubeIframeIsPlaying.value = true
