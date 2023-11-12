@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex min-h-screen flex-col items-center justify-center space-y-16 p-5 py-20 lg:p-10"
+    class="flex min-h-screen flex-col items-center justify-center space-y-20 p-5 py-20 md:p-10"
   >
     <div class="w-full space-y-5 lg:w-3/4">
       <div class="flex w-full items-end justify-between">
@@ -56,7 +56,7 @@
           Customer Center
         </NuxtLink>
       </div>
-      <div class="flex w-full flex-col items-center gap-5">
+      <!-- <div class="flex w-full flex-col items-center gap-5">
         <p class="text-xl font-bold">YG Entertainment Socials Media</p>
         <div class="flex items-center gap-5">
           <NuxtLink to="#">
@@ -75,7 +75,7 @@
             <IconWeibo class="h-6 w-6 hover:scale-105 hover:text-yggold" />
           </NuxtLink>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

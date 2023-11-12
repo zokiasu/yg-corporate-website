@@ -51,9 +51,9 @@ onUnmounted(() => {
 
 <template>
   <div ref="main" class="bg-[#EEEEEE]">
-    <!-- <SectionProjectSlider class="panel" /> -->
-    <!-- <LazySectionNews class="panel" /> -->
-    <!-- <LazySectionPerformanceVideo class="panel" /> -->
+    <SectionProjectSlider class="panel" />
+    <LazySectionNews class="panel" />
+    <LazySectionPerformanceVideo class="panel" />
     <LazySectionFooter class="panel" />
   </div>
 </template>
