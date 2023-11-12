@@ -7,7 +7,7 @@
       src="/anim_enter_yg.mp4"
       @ended="endedVideo"
       :class="videoClasses"
-      class="absolute inset-0 z-50 h-full w-full bg-black object-cover"
+      class="absolute inset-0 z-50 h-screen w-full bg-black object-cover"
     />
   </div>
 </template>
@@ -29,21 +29,21 @@ const videoClasses = computed(() => {
 })
 
 onMounted(() => {
-  document.body.style.overflow = 'hidden'; // Désactiver le défilement
+  document.body.style.overflow = 'hidden' // Désactiver le défilement
   setTimeout(() => {
     if (videoPlayer.value) {
-      videoPlayer.value.play();
-      console.log('startVideo');
+      videoPlayer.value.play()
+      console.log('startVideo')
     }
-  }, 150);
-});
+  }, 150)
+})
 
 const endedVideo = () => {
-  console.log('endedVideo');
-  fadeOut.value = true;
+  console.log('endedVideo')
+  fadeOut.value = true
   setTimeout(() => {
-    displayLoading.value = false;
-    document.body.style.overflow = ''; // Réactiver le défilement
-  }, 150);
-};
+    displayLoading.value = false
+    document.body.style.overflow = '' // Réactiver le défilement
+  }, 150)
+}
 </script>

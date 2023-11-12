@@ -22,7 +22,7 @@
       <button
         id="prev"
         @click="goPrev"
-        class="texte absolute left-0 top-[50%] z-10 flex items-center gap-2 pr-5 font-bold text-white"
+        class="absolute left-0 top-[50%] z-10 flex items-center gap-2 pr-5 font-bold text-white mix-blend-difference"
       >
         <div class="h-0.5 w-10 rounded-full bg-white" />
         <p>Prev</p>
@@ -30,7 +30,7 @@
       <button
         id="next"
         @click="goNext"
-        class="texte absolute right-0 top-[50%] z-10 flex items-center gap-2 pl-5 font-bold text-white"
+        class="absolute right-0 top-[50%] z-10 flex items-center gap-2 pl-5 font-bold text-white mix-blend-difference"
       >
         <p>Next</p>
         <div class="h-0.5 w-10 rounded-full bg-white" />
@@ -109,10 +109,3 @@ const goPrev = () => {
   }
 }
 </script>
-
-<style scoped>
-.texte {
-  mix-blend-mode: difference;
-  color: white;
-}
-</style>

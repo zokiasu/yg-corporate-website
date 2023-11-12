@@ -4,9 +4,9 @@
     :style="`background-image:  url('https://img.youtube.com/vi/${idVideo}/maxresdefault.jpg') ;`"
   >
     <div
-      class="absolute inset-0 z-20 flex w-full items-center justify-center bg-black/30"
+      class="absolute inset-0 z-10 flex w-full items-center justify-center bg-black/30"
     >
-      <div class="space-y-5 text-white">
+      <div class="space-y-5 text-white mix-blend-difference">
         <p class="text-center text-4xl font-bold 2xl:text-7xl">{{ name }}</p>
         <div class="flex justify-center gap-3">
           <NuxtLink :to="socials.youtube" target="_blank">
@@ -135,8 +135,12 @@ function initializeObserver() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           YoutubeIframeComponent.value?.playVideo()
+          setTimeout(() => {
+            YoutubeIframeIsPlaying.value = true
+          }, definedTimeToShowVideo())
         } else {
           YoutubeIframeComponent.value?.stopVideo()
+          YoutubeIframeIsPlaying.value = false
         }
       })
     },
@@ -162,3 +166,10 @@ onUnmounted(() => {
   }
 })
 </script>
+
+<style scoped>
+.texte {
+  mix-blend-mode: difference;
+  color: white;
+}
+</style>

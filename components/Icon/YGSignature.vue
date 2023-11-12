@@ -1,21 +1,16 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 32">
-    <defs>
-      <clipPath id="clip-path">
-        <path d="M0 0h137.32v32H0z" style="fill: none" />
-      </clipPath>
-    </defs>
-    <g id="Layer_2" data-name="Layer 2">
-      <g id="Layer_1-2" data-name="Layer 1">
-        <g id="Signature_-_YG_FAMILY" class="cls-2" data-name="Signature - YG FAMILY">
+    <g data-name="Layer 2">
+      <g data-name="Layer 1">
+        <g class="cls-2" data-name="Signature - YG FAMILY">
           <path
+            fill="currentColor"
             d="M80.52 9.79v3.88h-3.04V9.79L73.3.2h3.17L79 6.45 81.53.2h3.17l-4.18 9.59z"
-            class="cls-3"
           />
           <g class="cls-2">
             <path
+              fill="currentColor"
               d="M90.34 13.88c-3.28 0-4.93-1.68-4.93-4.12V4.12c0-2.48 1.66-4.12 4.93-4.12a23.66 23.66 0 0 1 4.31.43l-.36 2.65a31.78 31.78 0 0 0-3.94-.32c-1.51 0-1.9.79-1.9 1.84v4.62a1.67 1.67 0 0 0 1.9 1.92 12.42 12.42 0 0 0 1.8-.12V6.9H95v6.33a17 17 0 0 1-4.65.65M74.61 31.91V18.43h8.55v2.69h-5.52V24h5.1v2.69h-5.1v5.22h-3.03zm20.83 0h-3.16l-.73-2.63H87l-.73 2.63h-3.11l4.11-13.47h4Zm-7.71-5.16h3.1l-1.54-5.64Zm12.16-2.33-.21 7.49h-2.93l.57-13.48h3.03l3.24 8.58 3.23-8.58h3.04l.56 13.48h-2.93l-.2-7.49-2.35 5.75h-2.71l-2.34-5.75zm13.06-5.99h3.03V31.9h-3.03zm5.76 13.48V18.43h3.04v10.79h5.33v2.69h-8.37zm14.42-3.89v3.89h-3.03v-3.89l-4.19-9.59h3.18l2.53 6.25 2.52-6.25h3.18l-4.19 9.59zM0 .05v18.12L18.12.05H0zm31.95 0L0 32h14.51l17.44-17.45L49.36 32H63.9V14.74h-9.47v8.05L41.08 9.44H63.9V.05H31.95z"
-              class="cls-3"
             />
           </g>
         </g>

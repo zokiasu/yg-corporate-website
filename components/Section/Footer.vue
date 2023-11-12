@@ -26,56 +26,56 @@
         <CardShop v-for="i in 4" :key="i" />
       </div>
     </div>
-    <div class="w-full space-y-5 lg:w-3/4">
-      <div class="flex w-full items-center justify-between">
+    <div class="w-full space-y-16 lg:w-3/4">
+      <div class="flex w-full items-center justify-between text-ygsliver">
         <NuxtLink
           to="#"
-          class="whitespace-nowrap px-3 text-xs font-bold hover:text-yggold sm:text-sm md:px-5 md:text-xl"
+          class="whitespace-nowrap px-3 text-xs font-bold hover:text-ygdistinctblack sm:text-sm md:px-5 md:text-xl"
         >
           About YG
         </NuxtLink>
-        <div class="h-0.5 w-full bg-ygdistinctblack" />
+        <div class="h-0.5 w-full bg-ygsliver" />
         <NuxtLink
           to="#"
-          class="whitespace-nowrap px-3 text-xs font-bold hover:text-yggold sm:text-sm md:px-5 md:text-xl"
+          class="whitespace-nowrap px-3 text-xs font-bold hover:text-ygdistinctblack sm:text-sm md:px-5 md:text-xl"
         >
           Recruit
         </NuxtLink>
-        <div class="h-0.5 w-full bg-ygdistinctblack" />
+        <div class="h-0.5 w-full bg-ygsliver" />
         <NuxtLink
           to="#"
-          class="whitespace-nowrap px-3 text-xs font-bold hover:text-yggold sm:text-sm md:px-5 md:text-xl"
+          class="whitespace-nowrap px-3 text-xs font-bold hover:text-ygdistinctblack sm:text-sm md:px-5 md:text-xl"
         >
           Audition
         </NuxtLink>
-        <div class="h-0.5 w-full bg-ygdistinctblack" />
+        <div class="h-0.5 w-full bg-ygsliver" />
         <NuxtLink
           to="#"
-          class="whitespace-nowrap px-3 text-xs font-bold hover:text-yggold sm:text-sm md:px-5 md:text-xl"
+          class="whitespace-nowrap px-3 text-xs font-bold hover:text-ygdistinctblack sm:text-sm md:px-5 md:text-xl"
         >
           Customer Center
         </NuxtLink>
       </div>
-      <!-- <div class="flex w-full flex-col items-center gap-5">
+      <div class="flex w-full flex-col items-center gap-5 text-ygsliver lg:hidden">
         <p class="text-xl font-bold">YG Entertainment Socials Media</p>
         <div class="flex items-center gap-5">
           <NuxtLink to="#">
-            <IconInstagram class="h-6 w-6 hover:scale-105 hover:text-yggold" />
+            <IconInstagram class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
           <NuxtLink to="#">
-            <IconFacebook class="h-6 w-6 hover:scale-105 hover:text-yggold" />
+            <IconFacebook class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
           <NuxtLink to="#">
-            <IconX class="h-5 w-5 hover:scale-105 hover:text-yggold" />
+            <IconX class="h-5 w-5 hover:text-ygdistinctblack" />
           </NuxtLink>
           <NuxtLink to="#">
-            <IconYoutube class="h-6 w-6 hover:scale-105 hover:text-yggold" />
+            <IconYoutube class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
           <NuxtLink to="#">
-            <IconWeibo class="h-6 w-6 hover:scale-105 hover:text-yggold" />
+            <IconWeibo class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
