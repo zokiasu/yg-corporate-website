@@ -9,6 +9,7 @@
           v-for="news in $tm('listNews')"
           :title="$rt(news.title)"
           :description="$rt(news.desc)"
+          :link="$rt(news.link)"
           :key="news"
         />
       </div>

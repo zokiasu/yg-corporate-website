@@ -4,7 +4,7 @@
     class="min-w-[20rem] max-w-[20rem] overflow-hidden bg-white drop-shadow-xl transition-all duration-300 ease-in-out hover:drop-shadow-custom"
   >
     <NuxtImg
-      src="https://picsum.photos/200"
+      :src="link"
       :alt="title"
       class="aspect-video w-full object-cover"
     />
@@ -24,6 +24,7 @@
 type Props = {
   title?: string
   description?: string
+  link?: string
 }
 
 // Utilisez defineProps pour déclarer les props et leurs types
