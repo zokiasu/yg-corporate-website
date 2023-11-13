@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 <template>
   <NuxtLayout>
     <div>
-      <!-- <yg-loading /> -->
+      <yg-loading />
       <NuxtPage />
     </div>
   </NuxtLayout>
