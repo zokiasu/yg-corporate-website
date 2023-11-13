@@ -1,10 +1,10 @@
-<script lang="ts" setup>
+<script setup>
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const main = ref()
-let scrollTween
-let ctx
+let scrollTween;
+let ctx;
 
 const goToSection = (i) => {
   // Remove the GSAP instance with the specific ID

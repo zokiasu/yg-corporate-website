@@ -41,40 +41,7 @@
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-
-const videos = ref(['gQlMMD8auMs', 'gxeyC1cPJsA', 'EIz09kLzN9k'])
-const artists = ref([
-  {
-    name: 'Blackpink',
-    videoId: 'gQlMMD8auMs',
-    socials: {
-      youtube: '/',
-      instagram: '/',
-      twitter: '/',
-      weibo: '/',
-    },
-  },
-  {
-    name: 'Treasure',
-    videoId: 'gxeyC1cPJsA',
-    socials: {
-      youtube: '/',
-      instagram: '/',
-      twitter: '/',
-      weibo: '/',
-    },
-  },
-  {
-    name: 'AKMU',
-    videoId: 'EIz09kLzN9k',
-    socials: {
-      youtube: '/',
-      instagram: '/',
-      twitter: '/',
-      weibo: '/',
-    },
-  },
-])
+import { artists } from '~/constant/data'
 
 const swiperVideo = ref(null)
 const activeSlider = ref(0)

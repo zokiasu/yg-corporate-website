@@ -9,6 +9,7 @@ export default {
         ygdistinctblack: '#000000', // YG DISTINCT BLACK
         yggold: '#87674F', // YG GOLD
         yghypered: '#C82123', // YG HYPE RED
+        ygred: '#BE0028', // YG RED
       },
       dropShadow: {
         custom: '0 10px 10px rgba(153, 152, 153, 1)', // Exemple avec une ombre rouge

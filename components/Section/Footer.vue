@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+import {
+  YGAudition,
+  YGRecruit,
+  YGInstagram,
+  YGX,
+  YGFacebook,
+  YGYoutube,
+  YGWeibo,
+  shopArticles,
+} from '~/constant/data'
+</script>
+
 <template>
   <div
     class="flex min-h-screen flex-col items-center justify-center space-y-20 p-5 py-20 md:p-10"
@@ -11,7 +24,12 @@
         </CustomButton>
       </div>
       <div class="space-y-2">
-        <CardLightNews v-for="i in 3" :key="i" />
+        <CardLightNews
+          v-for="ygNews in $tm('listYGLifeNews')"
+          :title="$rt(ygNews.title)"
+          :date="$rt(ygNews.date)"
+          :key="$rt(ygNews.title)"
+        />
       </div>
     </div>
     <div class="w-full space-y-5 lg:w-3/4">
@@ -23,7 +41,14 @@
         </CustomButton>
       </div>
       <div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-4">
-        <CardShop v-for="i in 4" :key="i" />
+        <CardShop
+          v-for="article in shopArticles"
+          :key="article.artist"
+          :artistName="article.artist"
+          :category="article.category"
+          :image="article.image"
+          :link="article.link"
+        />
       </div>
     </div>
     <div class="w-full space-y-16 lg:w-3/4">
@@ -36,14 +61,14 @@
         </NuxtLink>
         <div class="h-0.5 w-full bg-ygsliver" />
         <NuxtLink
-          to="#"
+          :to="YGRecruit"
           class="whitespace-nowrap px-3 text-xs font-bold hover:text-ygdistinctblack sm:text-sm md:px-5 md:text-xl"
         >
           Recruit
         </NuxtLink>
         <div class="h-0.5 w-full bg-ygsliver" />
         <NuxtLink
-          to="#"
+          :to="YGAudition"
           class="whitespace-nowrap px-3 text-xs font-bold hover:text-ygdistinctblack sm:text-sm md:px-5 md:text-xl"
         >
           Audition
@@ -59,19 +84,19 @@
       <div class="flex w-full flex-col items-center gap-5 text-ygsliver lg:hidden">
         <p class="text-xl font-bold">YG Entertainment Socials Media</p>
         <div class="flex items-center gap-5">
-          <NuxtLink to="#">
+          <NuxtLink :to="YGInstagram">
             <IconInstagram class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
-          <NuxtLink to="#">
+          <NuxtLink :to="YGFacebook">
             <IconFacebook class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
-          <NuxtLink to="#">
+          <NuxtLink :to="YGX">
             <IconX class="h-5 w-5 hover:text-ygdistinctblack" />
           </NuxtLink>
-          <NuxtLink to="#">
+          <NuxtLink :to="YGYoutube">
             <IconYoutube class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
-          <NuxtLink to="#">
+          <NuxtLink :to="YGWeibo">
             <IconWeibo class="h-6 w-6 hover:text-ygdistinctblack" />
           </NuxtLink>
         </div>

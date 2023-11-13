@@ -1,12 +1,14 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import i18n from './i18n.config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', "@nuxt/image", '@nuxtjs/i18n'],
-  
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/image', '@nuxtjs/i18n'],
+
   i18n: {
+    locales: ['en', 'ja', 'ko', 'zh-CN'],
+    defaultLocale: 'en',
     vueI18n: './i18n.config.ts',
   },
-  
+
   build: {
     transpile: ['gsap'],
   },

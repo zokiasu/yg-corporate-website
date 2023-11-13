@@ -9,16 +9,16 @@
       <div class="space-y-5 text-white mix-blend-difference">
         <p class="text-center text-4xl font-bold 2xl:text-7xl">{{ name }}</p>
         <div class="flex justify-center gap-3">
-          <NuxtLink :to="socials.youtube" target="_blank">
+          <NuxtLink v-if="socials.youtube" :to="socials.youtube" target="_blank">
             <IconYoutube class="h-4 w-4" />
           </NuxtLink>
-          <NuxtLink :to="socials.instagram" target="_blank">
+          <NuxtLink v-if="socials.instagram" :to="socials.instagram" target="_blank">
             <IconInstagram class="h-4 w-4" />
           </NuxtLink>
-          <NuxtLink :to="socials.twitter" target="_blank">
+          <NuxtLink v-if="socials.twitter" :to="socials.twitter" target="_blank">
             <IconX class="h-4 w-4" />
           </NuxtLink>
-          <NuxtLink :to="socials.weibo" target="_blank">
+          <NuxtLink v-if="socials.weibo" :to="socials.weibo" target="_blank">
             <IconWeibo class="h-4 w-4" />
           </NuxtLink>
         </div>

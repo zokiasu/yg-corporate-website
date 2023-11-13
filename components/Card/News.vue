@@ -1,29 +1,41 @@
 <template>
   <NuxtLink
     to="#"
-    class="hover:drop-shadow-custom min-w-[20rem] max-w-[20rem] overflow-hidden bg-black drop-shadow-xl transition-all duration-300 ease-in-out"
+    class="min-w-[20rem] max-w-[20rem] overflow-hidden bg-white drop-shadow-xl transition-all duration-300 ease-in-out hover:drop-shadow-custom"
   >
     <NuxtImg
       src="https://picsum.photos/200"
-      alt="Lorem Picsum"
+      :alt="title"
       class="aspect-video w-full object-cover"
     />
     <div class="space-y-2 bg-white p-5">
-      <p class="text-ygdistinctblack font-semibold">
-        Lorem ipsum dolor sit amet consectetur. Tempor facilisi enim dapibus sed nibh
-        iaculis.
+      <p class="font-semibold text-ygdistinctblack">
+        {{ title }}
       </p>
-      <p class="text-ygvibegray text-xs">
-        Lorem ipsum dolor sit amet consectetur. Tempor facilisi enim dapibus sed nibh
-        iaculis. Laoreet gravida diam tortor fermentum odio curabitur tortor. In lobortis
-        tortor at ornare lacus sapien vel egestas mauris. Mauris vitae lacus at id
-        tristique ligula fermentum et dolor. Libero ac nec aliquam amet egestas id. Et
-        quis lorem sit lacus integer non interdum consequat....
+      <p class="line-clamp text-xs text-ygvibegray">
+        {{ description }}
       </p>
     </div>
   </NuxtLink>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// Définition des types pour les props
+type Props = {
+  title?: string
+  description?: string
+}
 
-<style></style>
+// Utilisez defineProps pour déclarer les props et leurs types
+const props = defineProps<Props>()
+</script>
+
+<style scoped>
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Change this to the number of lines you want */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
