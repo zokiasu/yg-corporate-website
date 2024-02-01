@@ -4,6 +4,7 @@
     class="min-w-[20rem] max-w-[20rem] overflow-hidden bg-white drop-shadow-xl transition-all duration-300 ease-in-out hover:drop-shadow-custom"
   >
     <NuxtImg
+            format="webp"
       :src="link"
       :alt="title"
       class="aspect-video w-full object-cover"

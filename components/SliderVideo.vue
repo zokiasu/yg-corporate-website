@@ -22,11 +22,6 @@
             <IconWeibo class="h-4 w-4" />
           </NuxtLink>
         </div>
-        <!-- <button
-        @click="toggleMute"
-        >
-        Mute/Unmute
-      </button> -->
       </div>
     </div>
 
@@ -43,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-// Définition des types pour les props
+
 type Props = {
   idVideo: string
   playVideo?: boolean
@@ -52,7 +47,7 @@ type Props = {
   socials: Object
 }
 
-// Utilisez defineProps pour déclarer les props et leurs types
+
 const props = defineProps<Props>()
 const emit = defineEmits(['videoTimeUpdate'])
 
@@ -70,7 +65,7 @@ const callPlayPauseIframe = () => {
     YoutubeIframeIsPlaying.value = false
   } else {
     YoutubeIframeComponent.value.playVideo()
-    // attendre 2 secondes avant de lancer
+    
     setTimeout(() => {
       YoutubeIframeIsPlaying.value = true
     }, definedTimeToShowVideo())
@@ -105,7 +100,6 @@ const updateTime = (time: Number) => {
   emit('videoTimeUpdate', { time, idVideo: props.idVideo })
 }
 
-// Utilisez watch pour surveiller les changements de props.playVideo
 watch(
   () => props.playVideo,
   (newValue, oldValue) => {
