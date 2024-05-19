@@ -93,7 +93,7 @@ const definedTimeToShowVideo = () => {
   if (props.initialTime?.time > 0) {
     return 2000
   }
-  return 7000
+  return 5000
 }
 
 const updateTime = (time: Number) => {

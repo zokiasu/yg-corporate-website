@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import {
-  YGAudition,
-  YGRecruit,
-  YGInstagram,
-  YGX,
-  YGFacebook,
-  YGYoutube,
-  YGWeibo,
-  shopArticles,
-} from '~/constant/data'
+  import {
+    YGAudition,
+    YGRecruit,
+    YGInstagram,
+    YGX,
+    YGFacebook,
+    YGYoutube,
+    YGWeibo,
+    shopArticles,
+  } from '~/constant/data'
 </script>
 
 <template>

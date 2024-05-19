@@ -24,7 +24,7 @@ const videoClasses = computed(() => {
     'opacity-0': fadeOut.value,
     'transition-all': fadeOut.value,
     'ease-in-out': fadeOut.value,
-    'duration-150': fadeOut.value,
+    'duration-100': fadeOut.value,
   }
 })
 

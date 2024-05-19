@@ -31,7 +31,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <div class="hide-scrollbar relative">
+  <div class="hide-scrollbar relative max-h-screen">
     <header
       class="fixed top-0 z-10 flex w-full items-center justify-between gap-10 overflow-y-scroll p-5 text-white transition-all duration-300 ease-in-out md:overflow-y-hidden lg:items-center"
       :class="
@@ -181,9 +181,9 @@ const toggleMenu = () => {
         <p>Hello World</p>
       </div>
     </header>
-
-    <slot />
-
+    <main>
+      <slot />
+    </main>
     <footer
       class="fixed bottom-0 flex w-full items-end justify-between p-5 text-white"
       :class="openMenu ? 'z-50' : 'z-20 mix-blend-difference'"
